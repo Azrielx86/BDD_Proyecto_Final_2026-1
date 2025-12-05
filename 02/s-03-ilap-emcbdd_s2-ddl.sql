@@ -1,0 +1,116 @@
+create table tipo_procesador_f4_emc_s2
+(
+    tipo_procesador_id number(5, 0)     not null,
+    clave              varchar2(40)     not null,
+    descripcion        varchar2(400)    not null,
+    constraint pk34_1_1_1 primary key (tipo_procesador_id)
+);
+
+
+
+create table tipo_tarjeta_video_f4_emc_s2
+(
+    tipo_tarjeta_video_id number(5, 0)     not null,
+    clave                 varchar2(40)     not null,
+    descripcion           varchar2(400)    not null,
+    constraint pk38_1_1_1 primary key (tipo_tarjeta_video_id)
+);
+
+
+
+create table tipo_almacenamiento_f4_emc_s2
+(
+    tipo_almacenamiento_id number(5, 0)     not null,
+    clave                  varchar2(40)     not null,
+    descripcion            varchar2(400)    not null,
+    constraint pk38_1_1_1_1_1_1_1 primary key (tipo_almacenamiento_id)
+);
+
+
+
+create table tipo_monitor_f4_emc_s2
+(
+    tipo_monitor_id number(5, 0)     not null,
+    clave           varchar2(40)     not null,
+    descripcion     varchar2(400)    not null,
+    constraint pk38_1_1_1_1_1_1_1_1_1_1_1 primary key (tipo_monitor_id)
+);
+
+
+
+create table laptop_f4_emc_s2
+(
+    laptop_id              number(10, 0)     not null,
+    num_serie              varchar2(18)      not null,
+    cantidad_ram           number(6, 0)      not null,
+    caracteristicas_extras varchar2(2000)    not null,
+    tipo_tarjeta_video_id  number(5, 0)      not null,
+    tipo_procesador_id     number(5, 0)      not null,
+    tipo_almacenamiento_id number(5, 0)      not null,
+    tipo_monitor_id        number(5, 0)      not null,
+    laptop_reemplazo_id    number(10, 0),
+    constraint pk20_1_1_1 primary key (laptop_id),
+    constraint reftipo_procesador_f4_emc_s249 foreign key (tipo_procesador_id)
+        references tipo_procesador_f4_emc_s2 (tipo_procesador_id),
+    constraint reftipo_tarjeta_video_f4_emc50 foreign key (tipo_tarjeta_video_id)
+        references tipo_tarjeta_video_f4_emc_s2 (tipo_tarjeta_video_id),
+    constraint reftipo_almacenamiento_f4_em51 foreign key (tipo_almacenamiento_id)
+        references tipo_almacenamiento_f4_emc_s2 (tipo_almacenamiento_id),
+    constraint reftipo_monitor_f4_emc_s253 foreign key (tipo_monitor_id)
+        references tipo_monitor_f4_emc_s2 (tipo_monitor_id)
+);
+
+create table servicio_laptop_f4_emc_s2
+(
+    num_servicio number(10, 0)     not null,
+    laptop_id    number(10, 0)     not null,
+    importe      number(8, 2)      not null,
+    diagnostico  varchar2(2000)    not null,
+    factura      blob,
+    sucursal_id  number(10, 0)     not null,
+    constraint pk28_1_1_1 primary key (num_servicio, laptop_id)
+);
+
+create table sucursal_f4_emc_s2
+(
+    sucursal_id number(10, 0)    not null,
+    clave       varchar2(10)     not null,
+    es_taller   number(1, 0)     not null,
+    es_venta    number(1, 0)     not null,
+    nombre      varchar2(40)     not null,
+    latitud     binary_float not null,
+    longitud    binary_float not null,
+    url         varchar2(200)    not null,
+    constraint pk1_2_1 primary key (sucursal_id)
+);
+
+
+
+create table sucursal_taller_f4_emc_s2
+(
+    sucursal_id       number(10, 0)    not null,
+    dia_descanso      number(1, 0)     not null,
+    telefono_atencion varchar2(20)     not null,
+    constraint pk5_1_1_1 primary key (sucursal_id),
+    constraint refsucursal_f4_emc_s255 foreign key (sucursal_id)
+        references sucursal_f4_emc_s2 (sucursal_id)
+);
+
+
+create table sucursal_venta_f4_emc_s2
+(
+    sucursal_id   number(10, 0)    not null,
+    hora_apertura timestamp(6) not null,
+    hora_cierre   timestamp(6) not null,
+    constraint pk9_2_1 primary key (sucursal_id),
+    constraint refsucursal_f4_emc_s254 foreign key (sucursal_id)
+        references sucursal_f4_emc_s2 (sucursal_id)
+);
+
+create table status_laptop
+(
+    status_laptop_id number(5, 0)     not null,
+    clave            varchar2(40)     not null,
+    descripcion      varchar2(400)    not null,
+    constraint pk50 primary key (status_laptop_id)
+);
