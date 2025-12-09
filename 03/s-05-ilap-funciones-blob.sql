@@ -29,7 +29,7 @@ show errors;
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f1
 create or replace function get_remote_serv_lap_f1_by_id(
-    p_num_servicio in numbre, p_laptop_id in number) return blob is
+    p_num_servicio in number, p_laptop_id in number) return blob is
 pragma autonomous_transaction;
 v_temp_pdf blob;
 begin
@@ -55,7 +55,7 @@ show errors
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f2
 create or replace function get_remote_serv_lap_f2_by_id(
-    p_num_servicio in numbre, p_laptop_id in number) return blob is
+    p_num_servicio in number, p_laptop_id in number) return blob is
 pragma autonomous_transaction;
 v_temp_pdf blob;
 begin
@@ -81,7 +81,7 @@ show errors;
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f3
 create or replace function get_remote_serv_lap_f3_by_id(
-    p_num_servicio in numbre, p_laptop_id in number) return blob is
+    p_num_servicio in number, p_laptop_id in number) return blob is
 pragma autonomous_transaction;
 v_temp_pdf blob;
 begin
@@ -107,7 +107,7 @@ show errors;
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f4
 create or replace function get_remote_serv_lap_f4_by_id(
-    p_num_servicio in numbre, p_laptop_id in number) return blob is
+    p_num_servicio in number, p_laptop_id in number) return blob is
 pragma autonomous_transaction;
 v_temp_pdf blob;
 begin
@@ -130,3 +130,4 @@ end;
 /
 
 show errors;
+
