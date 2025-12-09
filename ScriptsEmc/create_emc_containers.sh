@@ -19,5 +19,5 @@ docker run -i -t \
   --shm-size=2gb \
   --net=bdd-proy-net \
   --ip 172.20.0.22 \
-  --add-host h2-bdd-proy-emc.fi.unam:172.20.0.21 \
+  --add-host h1-bdd-proy-emc.fi.unam:172.20.0.21 \
   -e DISPLAY=$DISPLAY bdd-emc:1.0 bash
