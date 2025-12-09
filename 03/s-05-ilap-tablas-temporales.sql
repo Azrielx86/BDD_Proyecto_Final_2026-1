@@ -18,12 +18,12 @@ end;
 /
 
 prompt Tablas temporales para la tabla laptop
-create global temporary table ti_laptop_f1(
+create global temporary table ti_laptop_f5(
     laptop_id number(10, 0) constraint ti_laptop_f1_pk primary key,
     foto blob not null
 ) on commit preserve rows;
 
-create global temporary table ts_laptop_f1(
+create global temporary table ts_laptop_f5(
     laptop_id number(10, 0) constraint ts_laptop_f1_pk primary key,
     foto blob not null
 ) on commit preserve rows;
