@@ -24,7 +24,7 @@ exception
     raise;
 end;
 /
-show errors
+show errors;
 
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f1
@@ -76,7 +76,7 @@ exception
     raise;
 end;
 /
-show errors
+show errors;
 
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f3
@@ -102,7 +102,7 @@ exception
     raise;
 end;
 /
-show errors
+show errors;
 
 
 Prompt creando función para extraer dato Blob de servicio_laptop_f4
@@ -128,4 +128,5 @@ exception
     raise;
 end;
 /
-show errors
+
+show errors;
