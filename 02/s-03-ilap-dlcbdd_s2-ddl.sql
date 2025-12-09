@@ -19,7 +19,7 @@ create table historico_status_laptop_f1_dlc_s2
 );
 
 
-create table tipo_procesador_f2_dlc_s2
+create table tipo_procesador_r_dlc_s2
 (
     tipo_procesador_id number(5, 0)     not null,
     clave              varchar2(40)     not null,
@@ -28,7 +28,7 @@ create table tipo_procesador_f2_dlc_s2
 );
 
 
-create table tipo_tarjeta_video_f2_dlc_s2
+create table tipo_tarjeta_video_r_dlc_s2
 (
     tipo_tarjeta_video_id number(5, 0)     not null,
     clave                 varchar2(40)     not null,
@@ -37,7 +37,7 @@ create table tipo_tarjeta_video_f2_dlc_s2
 );
 
 
-create table tipo_almacenamiento_f2_dlc_s2
+create table tipo_almacenamiento_r_dlc_s2
 (
     tipo_almacenamiento_id number(5, 0)     not null,
     clave                  varchar2(40)     not null,
@@ -46,7 +46,7 @@ create table tipo_almacenamiento_f2_dlc_s2
 );
 
 
-create table tipo_monitor_f2_dlc_s2
+create table tipo_monitor_r_dlc_s2
 (
     tipo_monitor_id number(5, 0)     not null,
     clave           varchar2(40)     not null,
@@ -68,13 +68,13 @@ create table laptop_f2_dlc_s2
     laptop_reemplazo_id    number(10, 0),
     constraint pk20_1 primary key (laptop_id),
     constraint reftipo_procesador_f2_dlc_s238 foreign key (tipo_procesador_id)
-        references tipo_procesador_f2_dlc_s2 (tipo_procesador_id),
+        references tipo_procesador_r_dlc_s2 (tipo_procesador_id),
     constraint reftipo_tarjeta_video_f2_dlc39 foreign key (tipo_tarjeta_video_id)
-        references tipo_tarjeta_video_f2_dlc_s2 (tipo_tarjeta_video_id),
+        references tipo_tarjeta_video_r_dlc_s2 (tipo_tarjeta_video_id),
     constraint reftipo_almacenamiento_f2_dl40 foreign key (tipo_almacenamiento_id)
-        references tipo_almacenamiento_f2_dlc_s2 (tipo_almacenamiento_id),
+        references tipo_almacenamiento_r_dlc_s2 (tipo_almacenamiento_id),
     constraint reftipo_monitor_f2_dlc_s241 foreign key (tipo_monitor_id)
-        references tipo_monitor_f2_dlc_s2 (tipo_monitor_id)
+        references tipo_monitor_r_dlc_s2 (tipo_monitor_id)
 );
 
 

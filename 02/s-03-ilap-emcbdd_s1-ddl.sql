@@ -1,4 +1,4 @@
-create table tipo_procesador_f3_emc_s1
+create table tipo_procesador_r_emc_s1
 (
     tipo_procesador_id number(5, 0)     not null,
     clave              varchar2(40)     not null,
@@ -6,7 +6,7 @@ create table tipo_procesador_f3_emc_s1
     constraint pk34_1_1 primary key (tipo_procesador_id)
 );
 
-create table tipo_tarjeta_video_f3_emc_s1
+create table tipo_tarjeta_video_r_emc_s1
 (
     tipo_tarjeta_video_id number(5, 0)     not null,
     clave                 varchar2(40)     not null,
@@ -14,7 +14,7 @@ create table tipo_tarjeta_video_f3_emc_s1
     constraint pk38_1_1 primary key (tipo_tarjeta_video_id)
 );
 
-create table tipo_almacenamiento_f3_emc_s1
+create table tipo_almacenamiento_r_emc_s1
 (
     tipo_almacenamiento_id number(5, 0)     not null,
     clave                  varchar2(40)     not null,
@@ -22,7 +22,7 @@ create table tipo_almacenamiento_f3_emc_s1
     constraint pk38_1_1_1_1_1_1 primary key (tipo_almacenamiento_id)
 );
 
-create table tipo_monitor_f3_emc_s1
+create table tipo_monitor_r_emc_s1
 (
     tipo_monitor_id number(5, 0)     not null,
     clave           varchar2(40)     not null,
@@ -84,13 +84,13 @@ create table laptop_f3_emc_s1
     laptop_reemplazo_id    number(10, 0),
     constraint pk20_1_1 primary key (laptop_id),
     constraint reftipo_procesador_f3_emc_s127 foreign key (tipo_procesador_id)
-        references tipo_procesador_f3_emc_s1 (tipo_procesador_id),
+        references tipo_procesador_r_emc_s1 (tipo_procesador_id),
     constraint reftipo_tarjeta_video_f3_emc28 foreign key (tipo_tarjeta_video_id)
-        references tipo_tarjeta_video_f3_emc_s1 (tipo_tarjeta_video_id),
+        references tipo_tarjeta_video_r_emc_s1 (tipo_tarjeta_video_id),
     constraint reftipo_almacenamiento_f3_em29 foreign key (tipo_almacenamiento_id)
-        references tipo_almacenamiento_f3_emc_s1 (tipo_almacenamiento_id),
+        references tipo_almacenamiento_r_emc_s1 (tipo_almacenamiento_id),
     constraint reftipo_monitor_f3_emc_s130 foreign key (tipo_monitor_id)
-        references tipo_monitor_f3_emc_s1 (tipo_monitor_id)
+        references tipo_monitor_r_emc_s1 (tipo_monitor_id)
 );
 
 create table sucursal_venta_f3_emc_s1

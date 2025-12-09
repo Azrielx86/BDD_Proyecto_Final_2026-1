@@ -6,7 +6,7 @@ create table status_laptop
     constraint pk50 primary key (status_laptop_id)
 );
 
-create table historico_status_laptop_f1_dlc_s1
+create table historico_status_laptop_f2_dlc_s1
 (
     historico_status_laptop_id varchar2(40)    not null,
     fecha_status               varchar2(40),
@@ -17,7 +17,7 @@ create table historico_status_laptop_f1_dlc_s1
         references status_laptop (status_laptop_id)
 );
 
-create table tipo_monitor_f1_dlc_s1
+create table tipo_monitor_r_dlc_s1
 (
     tipo_monitor_id number(5, 0)     not null,
     clave           varchar2(40)     not null,
@@ -25,7 +25,7 @@ create table tipo_monitor_f1_dlc_s1
     constraint pk38_1_1_1_1_1_1_1_1 primary key (tipo_monitor_id)
 );
 
-create table tipo_almacenamiento_f1_dlc_s1
+create table tipo_almacenamiento_r_dlc_s1
 (
     tipo_almacenamiento_id number(5, 0)     not null,
     clave                  varchar2(40)     not null,
@@ -33,7 +33,7 @@ create table tipo_almacenamiento_f1_dlc_s1
     constraint pk38_1_1_1_1 primary key (tipo_almacenamiento_id)
 );
 
-create table tipo_tarjeta_video_f1_dlc_s1
+create table tipo_tarjeta_video_r_dlc_s1
 (
     tipo_tarjeta_video_id number(5, 0)     not null,
     clave                 varchar2(40)     not null,
@@ -41,7 +41,7 @@ create table tipo_tarjeta_video_f1_dlc_s1
     constraint pk38 primary key (tipo_tarjeta_video_id)
 );
 
-create table tipo_procesador_f1_dlc_s1
+create table tipo_procesador_r_dlc_s1
 (
     tipo_procesador_id number(5, 0)     not null,
     clave              varchar2(40)     not null,
@@ -62,13 +62,13 @@ create table laptop_f1_dlc_s1
     laptop_reemplazo_id    number(10, 0),
     constraint pk20 primary key (laptop_id),
     constraint reftipo_monitor_f1_dlc_s13 foreign key (tipo_monitor_id)
-        references tipo_monitor_f1_dlc_s1 (tipo_monitor_id),
+        references tipo_monitor_r_dlc_s1 (tipo_monitor_id),
     constraint reftipo_almacenamiento_f1_dlc4 foreign key (tipo_almacenamiento_id)
-        references tipo_almacenamiento_f1_dlc_s1 (tipo_almacenamiento_id),
+        references tipo_almacenamiento_r_dlc_s1 (tipo_almacenamiento_id),
     constraint reftipo_tarjeta_video_f1_dlc_5 foreign key (tipo_tarjeta_video_id)
-        references tipo_tarjeta_video_f1_dlc_s1 (tipo_tarjeta_video_id),
+        references tipo_tarjeta_video_r_dlc_s1 (tipo_tarjeta_video_id),
     constraint reftipo_procesador_f1_dlc_s17 foreign key (tipo_procesador_id)
-        references tipo_procesador_f1_dlc_s1 (tipo_procesador_id)
+        references tipo_procesador_r_dlc_s1 (tipo_procesador_id)
 );
 
 create table sucursal_f1_dlc_s1
