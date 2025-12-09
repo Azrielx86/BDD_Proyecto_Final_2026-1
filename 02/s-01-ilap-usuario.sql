@@ -14,5 +14,6 @@ grant create session,
         create synonym,
         create type,
         create view,
+        create trigger,
         create database link
         to ilap_bdd;
