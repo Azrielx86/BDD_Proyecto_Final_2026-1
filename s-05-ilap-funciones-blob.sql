@@ -34,7 +34,7 @@ show errors;
 
 
 prompt creando función para extraer dato blob de servicio_laptop_f1
-create or replace function get_remote_serv_lap_f1_by_id(
+create or replace function get_remote_serv_lap_f1_by_id(r
     p_num_servicio in number, p_laptop_id in number) return blob is
     pragma autonomous_transaction;
     v_temp_pdf blob;
@@ -54,6 +54,7 @@ begin
       and laptop_id = p_laptop_id;
 
     delete from ts_servicio_laptop_f1;
+    commit;
 
     return v_temp_pdf;
 exception
@@ -83,6 +84,7 @@ begin
     where num_servicio = p_num_servicio
       and laptop_id = p_laptop_id;
     delete from ts_servicio_laptop_f2;
+    commit;
     return v_temp_pdf;
 exception
     when others then
@@ -111,6 +113,7 @@ begin
     where num_servicio = p_num_servicio
       and laptop_id = p_laptop_id;
     delete from ts_servicio_laptop_f3;
+    commit;
     return v_temp_pdf;
 exception
     when others then
@@ -139,6 +142,7 @@ begin
     where num_servicio = p_num_servicio
       and laptop_id = p_laptop_id;
     delete from ts_servicio_laptop_f4;
+    commit;
     return v_temp_pdf;
 exception
     when others then
