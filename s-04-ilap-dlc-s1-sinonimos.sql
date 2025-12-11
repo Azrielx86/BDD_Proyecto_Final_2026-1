@@ -20,20 +20,26 @@ create or replace synonym servicio_laptop_f3 for servicio_laptop_f3_emc_s1@emcbd
 create or replace synonym sucursal_f3 for sucursal_f3_emc_s1@emcbdd_s1;
 create or replace synonym sucursal_taller_f3 for sucursal_taller_f3_emc_s1@emcbdd_s1;
 create or replace synonym sucursal_venta_f3 for sucursal_venta_f3_emc_s1@emcbdd_s1;
+       
+create or replace synonym laptop_f4 for laptop_f4_emc_s2@emcbdd_s2;
+create or replace synonym servicio_laptop_f4 for servicio_laptop_f4_emc_s2@emcbdd_s2;
+create or replace synonym sucursal_f4 for sucursal_f4_emc_s2@emcbdd_s2;
+create or replace synonym sucursal_taller_f4 for sucursal_taller_f4_emc_s2@emcbdd_s2;
+create or replace synonym sucursal_venta_f4 for sucursal_venta_f4_emc_s2@emcbdd_s2;
 
-create or replace synonym tipo_almacenamiento_r1 for tipo_almacenamiento_r_dlc_s1@dlcbdd_s1;
+create or replace synonym tipo_almacenamiento_r1 for tipo_almacenamiento_r_dlc_s1;
 create or replace synonym tipo_almacenamiento_r2 for tipo_almacenamiento_r_dlc_s2@dlcbdd_s2;
 create or replace synonym tipo_almacenamiento_r3 for tipo_almacenamiento_r_emc_s1@emcbdd_s1;
 create or replace synonym tipo_almacenamiento_r4 for tipo_almacenamiento_r_emc_s2@emcbdd_s2;
-create or replace synonym tipo_monitor_r1 for tipo_monitor_r_dlc_s1@dlcbdd_s1;
+create or replace synonym tipo_monitor_r1 for tipo_monitor_r_dlc_s1;
 create or replace synonym tipo_monitor_r2 for tipo_monitor_r_dlc_s2@dlcbdd_s2;
 create or replace synonym tipo_monitor_r3 for tipo_monitor_r_emc_s1@emcbdd_s1;
 create or replace synonym tipo_monitor_r4 for tipo_monitor_r_emc_s2@emcbdd_s2;
-create or replace synonym tipo_procesador_r1 for tipo_procesador_r_dlc_s1@dlcbdd_s1;
+create or replace synonym tipo_procesador_r1 for tipo_procesador_r_dlc_s1;
 create or replace synonym tipo_procesador_r2 for tipo_procesador_r_dlc_s2@dlcbdd_s2;
 create or replace synonym tipo_procesador_r3 for tipo_procesador_r_emc_s1@emcbdd_s1;
 create or replace synonym tipo_procesador_r4 for tipo_procesador_r_emc_s2@emcbdd_s2;
-create or replace synonym tipo_tarjeta_video_r1 for tipo_tarjeta_video_r_dlc_s1@dlcbdd_s1;
+create or replace synonym tipo_tarjeta_video_r1 for tipo_tarjeta_video_r_dlc_s1;
 create or replace synonym tipo_tarjeta_video_r2 for tipo_tarjeta_video_r_dlc_s2@dlcbdd_s2;
 create or replace synonym tipo_tarjeta_video_r3 for tipo_tarjeta_video_r_emc_s1@emcbdd_s1;
 create or replace synonym tipo_tarjeta_video_r4 for tipo_tarjeta_video_r_emc_s2@emcbdd_s2;
