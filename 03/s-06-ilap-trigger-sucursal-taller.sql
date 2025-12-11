@@ -46,13 +46,13 @@ begin
             union all
             select 4 from sucursal_f4 where sucursal_id = :old.sucursal_id);
             if v_frag_location = 1 then
-                delete from sucursal_f1 where sucursal_id = :old.sucursal_id;
+                delete from sucursal_taller_f1 where sucursal_id = :old.sucursal_id;
             elsif v_frag_location = 2 then
-                delete from sucursal_f2 where sucursal_id = :old.sucursal_id;
+                delete from sucursal_taller_f2 where sucursal_id = :old.sucursal_id;
             elsif v_frag_location = 3 then
-                delete from sucursal_f3 where sucursal_id = :old.sucursal_id;
+                delete from sucursal_taller_f3 where sucursal_id = :old.sucursal_id;
             elsif v_frag_location = 4 then
-                delete from sucursal_f4 where sucursal_id = :old.sucursal_id;
+                delete from sucursal_taller_f4 where sucursal_id = :old.sucursal_id;
             else
                 raise_application_error(-20020, 'La sucursal '
                     || :new.sucursal_id

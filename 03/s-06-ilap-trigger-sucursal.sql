@@ -18,7 +18,7 @@ begin
                 values (:new.sucursal_id, :new.clave, :new.es_taller, :new.es_venta, :new.nombre,
                         :new.latitud, :new.longitud, :new.url);
             elsif substr(:new.clave, 3, 2) = 'SO' then
-                insert into sucursal_f2(sucursal_id, clave, es_taller, es_venta, nombre, latitud, longitud, url)
+                insert into sucursal_f4(sucursal_id, clave, es_taller, es_venta, nombre, latitud, longitud, url)
                 values (:new.sucursal_id, :new.clave, :new.es_taller, :new.es_venta, :new.nombre,
                         :new.latitud, :new.longitud, :new.url);
             else
@@ -29,7 +29,7 @@ begin
         when updating then
             raise_application_error(-20030, 'Operación UPDATE no soportada.');
         when deleting then
-            if substr(:old.clave, 3, 2) = 'NO' or (:old.es_venta = 1 and :old.es_taller = 1) then
+            if (:old.es_venta = 1 and :old.es_taller = 1) or substr(:old.clave, 3, 2) = 'NO' then
                 delete
                 from sucursal_f1
                 where :old.sucursal_id = sucursal_id;
@@ -47,7 +47,7 @@ begin
                 where :old.sucursal_id = sucursal_id;
             else
                 raise_application_error(-20010, 'La región '
-                    || substr(:new.clave, 3, 2)
+                    || substr(:old.clave, 3, 2)
                     || ' no está permitida.');
             end if;
         end case;
