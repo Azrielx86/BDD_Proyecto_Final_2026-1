@@ -10,7 +10,7 @@ create table status_laptop
 create table historico_status_laptop_f1_dlc_s2
 (
     historico_status_laptop_id varchar2(40)    not null,
-    fecha_status               varchar2(40),
+    fecha_status               date not null,
     status_laptop_id           number(5, 0)    not null,
     laptop_id                  varchar2(40),
     constraint pk32_1 primary key (historico_status_laptop_id),
@@ -89,7 +89,7 @@ create table laptop_f5_dlc_s2
 create table laptop_inventario_f2_dlc_s2
 (
     laptop_id        number(10, 0)    not null,
-    fecha_status     timestamp(6) not null,
+    fecha_status     date not null,
     sucursal_id      number(10, 0),
     status_laptop_id number(5, 0)     not null,
     constraint pk27 primary key (laptop_id),
