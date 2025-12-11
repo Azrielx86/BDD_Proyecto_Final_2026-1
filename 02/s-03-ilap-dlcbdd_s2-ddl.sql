@@ -9,10 +9,10 @@ create table status_laptop
 
 create table historico_status_laptop_f1_dlc_s2
 (
-    historico_status_laptop_id varchar2(40)    not null,
+    historico_status_laptop_id number(10, 0)    not null,
     fecha_status               date not null,
     status_laptop_id           number(5, 0)    not null,
-    laptop_id                  varchar2(40),
+    laptop_id                  numeric(10, 0),
     constraint pk32_1 primary key (historico_status_laptop_id),
     constraint refstatus_laptop_147 foreign key (status_laptop_id)
         references status_laptop (status_laptop_id)
