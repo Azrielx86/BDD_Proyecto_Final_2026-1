@@ -7,7 +7,7 @@ declare
     cursor cur_tablas is
         select table_name
         from user_tables
-        where table_name in ('TI_LAPTOP_F1', 'TS_LAPTOP_F1')
+        where table_name in ('TI_LAPTOP_F5', 'TS_LAPTOP_F5')
            or regexp_like(table_name, '^T[I|S]_SERVICIO_LAPTOP_F\d$');
 begin
     for r in cur_tablas

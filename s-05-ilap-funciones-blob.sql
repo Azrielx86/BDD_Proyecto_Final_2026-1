@@ -34,7 +34,7 @@ show errors;
 
 
 prompt creando función para extraer dato blob de servicio_laptop_f1
-create or replace function get_remote_serv_lap_f1_by_id(r
+create or replace function get_remote_serv_lap_f1_by_id(
     p_num_servicio in number, p_laptop_id in number) return blob is
     pragma autonomous_transaction;
     v_temp_pdf blob;
