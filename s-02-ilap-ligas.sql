@@ -39,5 +39,4 @@ create database link emcbdd_s2.fi.unam using 'EMCBDD_S2';
 create database link dlcbdd_s1.fi.unam using 'DLCBDD_S1';
 
 prompt Listo.
-exit
 

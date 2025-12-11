@@ -3,7 +3,7 @@
 --@Descripción:     Eliminación y creación del usuario.
 
 prompt Creando al usuario ialp_bdd
-drop user if exists ilap_bdd;
+drop user if exists ilap_bdd cascade;
 
 create user ilap_bdd identified by ilap_bdd
     quota unlimited on users;

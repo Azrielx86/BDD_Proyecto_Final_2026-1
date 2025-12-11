@@ -63,4 +63,3 @@ prompt Creando las vistas con soporte para BLOBS
 @s-05-ilap-dlcbdd_s2-vistas-blob.sql
 
 prompt Listo!
-disconnect

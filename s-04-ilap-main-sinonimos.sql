@@ -54,4 +54,3 @@ create or replace synonym tipo_tarjeta_video_r for tipo_tarjeta_video_r_dlc_s2;
 @s-04-valida-sinonimos.sql
 
 prompt Listo!
-disconnect

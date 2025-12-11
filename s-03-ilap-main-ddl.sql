@@ -32,4 +32,3 @@ connect ilap_bdd/ilap_bdd@dlcbdd_s2
 @s-03-ilap-dlcbdd_s2-ddl.sql
 
 prompt Listo!
-disconnect
