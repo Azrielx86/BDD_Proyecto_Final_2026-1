@@ -13,6 +13,7 @@ prompt Iniciando con la creaciónd de la BDD
 @s-04-ilap-main-sinonimos.sql
 @s-05-ilap-main-vistas.sql
 @s-06-ilap-main-triggers.sql
+@s-07-ilap-main-soporte-blobs.sql
 
 prompt Listo!
 disconnect

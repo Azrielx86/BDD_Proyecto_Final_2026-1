@@ -15,5 +15,6 @@ grant create session,
         create type,
         create view,
         create trigger,
+        create any directory,
         create database link
         to ilap_bdd;

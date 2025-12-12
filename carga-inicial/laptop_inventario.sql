@@ -1,4 +1,3 @@
-ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH24:MI:SS';
 insert into laptop_inventario (laptop_id, fecha_status, rfc_cliente, num_tarjeta, sucursal_id, status_laptop_id) values (1, '2010-09-11 06:38:18', 'FOXT391129PRG', '6626688884326005', 2427, 5);
 insert into laptop_inventario (laptop_id, fecha_status, rfc_cliente, num_tarjeta, sucursal_id, status_laptop_id) values (2, '2011-02-05 18:00:28', 'CIOE091117ETL', '1604725921418771', 1723, 5);
 insert into laptop_inventario (laptop_id, fecha_status, rfc_cliente, num_tarjeta, sucursal_id, status_laptop_id) values (3, '2008-04-19 17:00:04', 'DXGP090930XES', '8868977914042282', 2617, 5);

@@ -17,9 +17,9 @@ begin
                 values (:new.num_servicio, :new.laptop_id, :new.importe, :new.diagnostico, :new.factura,
                         :new.sucursal_id);
             else
-                select *
+                select nvl(max(f), 0)
                 into v_frag_location
-                from (select 1
+                from (select 1 f
                       from sucursal_taller_f1
                       where sucursal_id = :new.sucursal_id
                       union all
@@ -62,9 +62,9 @@ begin
                 from servicio_laptop_f4
                 where (num_servicio, laptop_id) = (:old.num_servicio, :old.laptop_id);
             else
-                select *
+                select nvl(max(f), 0)
                 into v_frag_location
-                from (select 1
+                from (select 1 f
                       from sucursal_taller_f1
                       where sucursal_id = :old.sucursal_id
                       union all

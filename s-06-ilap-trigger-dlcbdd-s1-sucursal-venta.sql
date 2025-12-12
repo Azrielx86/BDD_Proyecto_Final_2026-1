@@ -16,9 +16,9 @@ begin
                 insert into sucursal_venta_f1(sucursal_id, hora_apertura, hora_cierre)
                 values (:new.sucursal_id, :new.hora_apertura, :new.hora_cierre);
             else
-                select *
+                select nvl(max(f), 0)
                 into v_frag_location
-                from (select 2
+                from (select 2 f
                       from sucursal_f2
                       where sucursal_id = :new.sucursal_id
                       union all
@@ -56,9 +56,9 @@ begin
             if v_local_count > 0 then
                 delete from sucursal_venta_f1 where sucursal_id = :old.sucursal_id;
             else
-                select *
+                select nvl(max(f), 0)
                 into v_frag_location
-                from (select 2
+                from (select 2 f
                       from sucursal_f2
                       where sucursal_id = :old.sucursal_id
                       union all
